@@ -1,0 +1,9 @@
+{
+  "name": "dict.js",
+  "version": "0.1.2",
+  "main": "./lib/dict.js",
+  "dependencies": {
+    "chai": "*",
+    "underscore": "*"
+  }
+}

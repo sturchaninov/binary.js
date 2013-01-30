@@ -56,5 +56,13 @@ describe('Binary', function() {
       var otherBin = Binary.fromArrayBuffer(buffer);
       assert.equal(otherBin.asString(), str);
     });
+
+    it('works with a byteArray', function() {
+      var byteArray = [97, 98, 99];
+      var bin = Binary.fromByteArray(byteArray);
+      var buffer = bin.asArrayBuffer();
+      var otherBin = Binary.fromArrayBuffer(buffer);
+      assert.deepEqual(otherBin.asByteArray(), byteArray);
+    });
   });
 });

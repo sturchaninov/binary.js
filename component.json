@@ -1,9 +1,8 @@
 {
-  "name": "dict.js",
-  "version": "0.1.2",
-  "main": "./lib/dict.js",
+  "name": "binary.js",
+  "version": "0.0.1",
+  "main": "./lib/binary.js",
   "dependencies": {
-    "chai": "*",
-    "underscore": "*"
+    "chai": "*"
   }
 }

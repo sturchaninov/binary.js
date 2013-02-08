@@ -12,6 +12,7 @@ files = [
   MOCHA_ADAPTER,
   'components/chai/chai.js',
   'components/underscore/underscore.js',
+  'lib/compat.js',
   'lib/binary.js',
   'tests/*.js'
 ];
@@ -57,7 +58,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome', 'Firefox', 'Safari'];
+browsers = ['Chrome', 'Firefox', 'Safari', 'Opera'];
 
 
 // If browser does not capture in given timeout [ms], kill it

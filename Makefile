@@ -4,3 +4,6 @@ dev:
 
 test: 
 	@testacular start --single-run
+
+interactive-test: 
+	@testacular start 

@@ -1,5 +1,23 @@
 {
-  "name": "binary.js",
+  "name": "binary",
+  "repo": "virtru/binary.js",
   "version": "0.0.1",
-  "main": "./lib/binary.js"
+  "keywords": [
+    "binary",
+    "arraybuffer",
+    "bytes"
+  ],
+  "dependencies": {
+    "virtru-components/utf8": "*"
+  },
+  "development": {
+    "virtru-components/chai": "*"
+  },
+  "scripts": [
+    "index.js",
+    "lib/binary.js"
+  ],
+  "testScripts": [
+    "tests/test.js"
+  ]
 }

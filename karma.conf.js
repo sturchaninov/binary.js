@@ -10,11 +10,8 @@ basePath = './';
 files = [
   MOCHA,
   MOCHA_ADAPTER,
-  'components/chai/chai.js',
-  'components/underscore/underscore.js',
-  'lib/compat.js',
-  'lib/binary.js',
-  'tests/*.js'
+  'build/test-build.js',
+  'build/test-loader.js'
 ];
 
 

@@ -1,7 +1,7 @@
-var assert = chai.assert;
+var assert = require('chai').assert;
+var Binary = require('../lib/binary').Binary;
 
 describe('Binary (without ArrayBuffer)', function() {
-  var Binary = binary.Binary;
   describe('factory methods', function() {
     it('#fromString', function() {
       var bin = Binary.fromString('abc');
@@ -43,13 +43,11 @@ describe('Binary (without ArrayBuffer)', function() {
 });
 
 describe('Binary (with ArrayBuffer)', function() {
-  var _hasArrayBuffers = this.ArrayBuffer !== undefined;
+  var _hasArrayBuffers = window.ArrayBuffer !== undefined;
   if(!_hasArrayBuffers) {
     return;
   }
   
-  var Binary = binary.Binary;
-
   describe('factory methods', function() {
     it('#fromArrayBuffer', function() {
       var buffer = new ArrayBuffer(3);

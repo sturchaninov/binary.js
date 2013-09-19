@@ -322,4 +322,54 @@ describe('Slice method', function() {
     it(test8.message, function(){ test = test8.test(bin) });
     it(test9.message, function(){ test = test9.test(bin) });
   });
+
+  describe('Slice between types', function() {
+
+    it('Slice from String to ByteArray', function(){
+      var buffer = '0123456789';
+      var binary1 = Binary.fromString(buffer);
+      var binary2 = Binary.fromByteArray(Binary.fromString(buffer).asByteArray());
+
+      var result1 = binary1.slice(0);
+      var result2 = binary2.slice(0);
+
+      assert.equal(result1.asString(), result2.asString());
+
+    });
+
+    it('Slice from String to ArrayBuffer', function(){
+      var buffer = '0123456789';
+      var binary1 = Binary.fromString(buffer);
+      var binary2 = Binary.fromArrayBuffer(Binary.fromString(buffer).asArrayBuffer());
+
+      var result1 = binary1.slice(0);
+      var result2 = binary2.slice(0);
+
+      assert.equal(result1.asString(), result2.asString());
+
+    });
+
+    it('Slice from String to ByteArray test negatives (slice vs substring)', function(){
+      var buffer = '0123456789';
+      var binary1 = Binary.fromString(buffer);
+      var binary2 = Binary.fromByteArray(Binary.fromString(buffer).asByteArray());
+
+      var result1 = binary1.slice(-5, 7);
+      var result2 = binary2.slice(-5, 7);
+
+      assert.equal(result1.asString(), result2.asString());
+    });
+
+    it('Slice from String to ArrayBuffer test negatives (slice vs substring)', function(){
+      var buffer = '0123456789';
+      var binary1 = Binary.fromString(buffer);
+      var binary2 = Binary.fromArrayBuffer(Binary.fromString(buffer).asArrayBuffer());
+
+      var result1 = binary1.slice(-5, 7);
+      var result2 = binary2.slice(-5, 7);
+
+      assert.equal(result1.asString(), result2.asString());
+    });
+
+  });
 });

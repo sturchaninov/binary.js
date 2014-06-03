@@ -1,14 +1,14 @@
 {
   "name": "binary",
   "repo": "virtru/binary.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "keywords": [
     "binary",
     "arraybuffer",
     "bytes"
   ],
   "dependencies": {
-    "virtru-components/utf8": "*"
+    "virtru-components/utf8": "0.1.0"
   },
   "development": {
     "virtru-components/chai": "*"

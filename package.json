@@ -1,0 +1,22 @@
+{
+  "name": "binary",
+  "repo": "virtru/binary.js",
+  "version": "0.1.6",
+  "keywords": [
+    "binary",
+    "arraybuffer",
+    "bytes"
+  ],
+  "dependencies": {
+  },
+  "development": {
+    "chai": "*"
+  },
+  "scripts": [
+    "index.js",
+    "lib/binary.js"
+  ],
+  "testScripts": [
+    "tests/test.js"
+  ]
+}

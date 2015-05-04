@@ -11,12 +11,5 @@
   },
   "development": {
     "chai": "*"
-  },
-  "scripts": [
-    "index.js",
-    "lib/binary.js"
-  ],
-  "testScripts": [
-    "tests/test.js"
-  ]
+  }
 }

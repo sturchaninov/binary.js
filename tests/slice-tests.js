@@ -147,9 +147,6 @@ describe('Slice method', function() {
     it(test7.message, function(){ test = test7.test(bin) });
     it(test8.message, function(){ test = test8.test(bin) });
     it(test9.message, function(){ test = test9.test(bin) });
-    //    it(test10.message, function(){ test = test10.test(bin) });
-    //    it(test11.message, function(){ test = test11.test(bin) });
-
   });
 
   describe('Slice ByteArray', function() {

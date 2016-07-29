@@ -2,6 +2,8 @@
   "name": "binary",
   "repo": "virtru/binary",
   "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "test": "mocha tests --recursive"
   },

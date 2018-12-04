@@ -12,9 +12,6 @@
     "arraybuffer",
     "bytes"
   ],
-  "dependencies": {
-    "buffer": "^5.2.1"
-  },
   "development": {
     "chai": "*"
   },

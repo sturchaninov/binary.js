@@ -12,6 +12,7 @@
     "arraybuffer",
     "bytes"
   ],
+  "dependencies": {},
   "development": {
     "chai": "*"
   },

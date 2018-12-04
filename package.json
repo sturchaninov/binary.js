@@ -1,11 +1,12 @@
 {
   "name": "binary",
   "repo": "virtru/binary",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "test-debug": "mocha debug tests --recursive"
   },
   "keywords": [
     "binary",

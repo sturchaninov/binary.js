@@ -1,5 +1,3 @@
-* 1.1.0 (2018-12-3)
-  * _minor_: Fixed issues with unicode characters
 * 1.0.2 (2017-01-23)
   * _patch_: Fixes issue with firefox failing to convert opaque buffers
 * 1.0.1 (2016-09-12)

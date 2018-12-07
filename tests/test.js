@@ -107,14 +107,6 @@ describe('Binary (with ArrayBuffer)', function() {
       var otherBin = Binary.fromArrayBuffer(buffer);
       assert.deepEqual(otherBin.asByteArray(), byteArray);
     });
-
-    it('works with a byteArray and unicode string', function() {
-      var byteArray = [227, 131, 145, 227, 130, 185, 227, 131, 175, 227, 131, 188, 227, 131, 137];
-      var bin = Binary.fromByteArray(byteArray);
-      var buffer = bin.asArrayBuffer();
-      var otherBin = Binary.fromArrayBuffer(buffer);
-      assert.deepEqual(otherBin.asString(), 'パスワード');
-    });
   });
 });
 
@@ -160,19 +152,6 @@ describe('Binary (with Buffer)', function() {
       for(var i = 0; i < bufferView.length; i++) {
         assert.equal(bufferView[i], byteArray[i]);
       }
-    });
-
-    it('works with an arrayBuffer unicode', function() {
-      var byteArray = [227, 131, 145, 227, 130, 185, 227, 131, 175, 227, 131, 188, 227, 131, 137];
-      var buffer = new Buffer(byteArray);
-      var bin = Binary.fromBuffer(buffer);
-
-      var actualBuffer = bin.asArrayBuffer();
-      var bufferView = new Uint8Array(actualBuffer);
-      var otherBin = Binary.fromArrayBuffer(actualBuffer);
-      // Check that the lengths match
-      assert.equal(bufferView.length, byteArray.length);
-      assert.equal(otherBin.asString(), 'パスワード');
     });
 
     it('works with a string', function() {

@@ -1,7 +1,7 @@
 {
   "name": "binary",
   "repo": "virtru/binary",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

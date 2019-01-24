@@ -1,0 +1,32 @@
+env:
+  USE_NODE_8: true
+
+steps:
+  - label: "Install Test Dependencies"
+    command: "buildkite-scripts/scripts/npm-install.sh"
+
+  - wait
+
+  - label: ":heavy_check_mark: Linting"
+    command: "buildkite-scripts/scripts/run-linting.sh"
+    env:
+      FORCE_LINT_TO_SUCCEED: "true"
+
+  - label: ":key: License Checker"
+    command: "buildkite-scripts/scripts/run-license-checker.sh"
+
+  - label: ":npm: :lock: NPM Audit"
+    command: "buildkite-scripts/mars/wrap/npm-audit.sh"
+    agents:
+      queue: build
+    env:
+      FORCE_AUDIT_TO_SUCCEED: true
+
+  - label: ":npm: Test"
+    command: "buildkite-scripts/scripts/npm-test.sh"
+
+  - wait
+
+  - label: "Publish NPM Package"
+    command: "buildkite-scripts/scripts/tag-release.sh"
+    branches: "master"

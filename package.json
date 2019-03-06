@@ -5,8 +5,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "test": "mocha tests --recursive",
-    "test-debug": "mocha debug tests --recursive"
+    "test": "mocha tests --recursive"
   },
   "keywords": [
     "binary",
